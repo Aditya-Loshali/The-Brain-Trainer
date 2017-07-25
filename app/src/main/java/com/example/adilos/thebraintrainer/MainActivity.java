@@ -5,6 +5,7 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     TextView timerTextView;
     Button playAgainButton;
     RelativeLayout gameRelativeLayout;
+    GridLayout gridLayout;
 
     ArrayList<Integer> answers = new ArrayList<Integer>();
     int locationOfCorrectAnswer;
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         pointsTextView.setText("0/0");
         resultTextView.setText("");
         playAgainButton.setVisibility(View.INVISIBLE);
+        gridLayout.setVisibility(GridLayout.VISIBLE);
 
         generateQuestion();
 
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 playAgainButton.setVisibility(View.VISIBLE);
                 timerTextView.setText("0s");
                 resultTextView.setText("Your score: " + Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
+                gridLayout.setVisibility(GridLayout.INVISIBLE);
 
             }
         }.start();
@@ -154,5 +158,6 @@ public class MainActivity extends AppCompatActivity {
         timerTextView = (TextView)findViewById(R.id.timerTextView);
         playAgainButton = (Button)findViewById(R.id.playAgainButton);
         gameRelativeLayout = (RelativeLayout)findViewById(R.id.gameRelativeLayout);
+        gridLayout = (GridLayout) findViewById(R.id.gridLayout);
     }
 }

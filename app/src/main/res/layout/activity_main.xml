@@ -130,6 +130,7 @@
                 android:textSize="80sp"
                 android:background="#ff0bfffd"
                 android:onClick="chooseAnswer" />
+
         </GridLayout>
 
         <TextView
@@ -143,13 +144,15 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="Play Again"
             android:id="@+id/playAgainButton"
-            android:layout_below="@+id/resultTextView"
-            android:layout_alignStart="@+id/sumTextView"
-            android:layout_marginTop="25dp"
             android:onClick="playAgain"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:layout_height="80dp"
+            android:background="@color/colorPrimary"
+            android:layout_below="@+id/resultTextView"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/background_light" />
+
     </RelativeLayout>
 </RelativeLayout>
